@@ -5,14 +5,18 @@ import ReactDOM from 'react-dom';
 import { Router, Route, Link} from 'react-router';
 import { history } from 'react-router/lib/HashHistory';
 
-import App from './components/App';
 import Login from './components/Login';
 
+class App extends React.Component {
+  render() {
+    return (
+      <div className="app-wrapper">
+        <Login />
+      </div>
+    );
+  }
+}
+
 $(document).ready( () => {
-  ReactDOM.render(
-    <div>
-      <App />
-      <Login />
-    </div>
-    , document.getElementById("root"));
+  ReactDOM.render(<App />, document.getElementById("root"));
 })
