@@ -1,6 +1,15 @@
 import ServerActionsCreator from "./actions/ServerActionsCreator";
 
 export default {
+  loginUserGithub() {
+    $get("/auth/github")
+    .success(user => {
+      console.log(user);
+    })
+    .error(error => {
+      console.log(error);
+    })
+  },
   getAllResources() {
     $.get("/resources")
     .success(resources => {
