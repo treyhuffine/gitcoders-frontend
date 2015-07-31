@@ -6,7 +6,8 @@ import { history } from 'react-router/lib/HashHistory';
 
 import App from './App.jsx'
 import Landing from './components/Landing';
-import ProfilePage from './components/ProfilePage'
+import ProfilePage from './components/ProfilePage';
+import AuthSession from './components/AuthSession';
 
 export default class Root extends React.Component {
   render() {
@@ -14,6 +15,7 @@ export default class Root extends React.Component {
       <Router history={history}>
         <Route name="landing" path="/" component={App}>
           <Route name="profile" path="/git/:login" component={ProfilePage} />
+          <Route name="authsession" path="/auth/:auth_token" component={AuthSession} />
         </Route>
       </Router>
     );

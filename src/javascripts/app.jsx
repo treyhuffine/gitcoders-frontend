@@ -6,13 +6,13 @@ import API from './API'
 // let getCurrentUserFromStore = () => {
 //   return { currentUser: UserStore.getCurrentUser() };
 // }
-$.get('http://localhost:3000/currentuser')
-.success( user => {
-  console.log(user);
-})
-.error( error => {
-  console.log(error);
-})
+// $.post('http://localhost:3000/currentuser')
+// .success( user => {
+//   console.log(user);
+// })
+// .error( error => {
+//   console.log(error);
+// })
 export default class App extends React.Component {
   // constructor(props) {
   //   super(props);

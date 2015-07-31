@@ -12,7 +12,7 @@ function requestData(props) {
   // RepoActionCreators.requestStarredReposPage(userLogin, true);
 }
 
-export default class Profile extends React.Component{
+export default class Profile extends React.Component {
   componentWillMount() {
     requestData(this.props);
   }
