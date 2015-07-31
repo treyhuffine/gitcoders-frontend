@@ -2,6 +2,12 @@ import AppDispatcher from "../dispatcher"
 import Actions from "../constants"
 
 export default {
+  getCurrentUser(payload) {
+    AppDispatcher.dispatch({
+      actionType: GET_CURRENT_USER,
+      payload
+    })
+  },
   receiveResources(payload) {
     AppDispatcher.dispatch({
       actionType: Actions.RECEIVE_RESOURCES,
