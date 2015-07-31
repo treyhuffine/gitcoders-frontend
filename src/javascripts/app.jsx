@@ -1,22 +1,15 @@
 import $ from './vendor/jquery.min'
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-import { Router, Route, Link} from 'react-router';
-import { history } from 'react-router/lib/HashHistory';
+// import Landing from './components/Landing';
 
-import Login from './components/Login';
-
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
       <div className="app-wrapper">
-        <Login />
+        <h1>Gitcoders</h1>
+        {this.props.children}
       </div>
     );
   }
 }
-
-$(document).ready( () => {
-  ReactDOM.render(<App />, document.getElementById("root"));
-})

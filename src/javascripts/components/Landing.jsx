@@ -1,7 +1,7 @@
 import React from 'react';
 import API from '../API';
 
-export default class Login extends React.Component{
+export default class Landing extends React.Component{
   render() {
     return (
       <div className="login-container">
