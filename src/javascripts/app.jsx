@@ -1,5 +1,5 @@
 import $ from './vendor/jquery.min'
-import React from 'react';
+import React, { PropTypes } from 'react';
 import API from './API'
 
 // import Landing from './components/Landing';
@@ -23,7 +23,11 @@ export default class App extends React.Component {
   //   console.log("change");
   //   this.setState(getCurrentUserFromStore());
   // }
+  static propTypes: {
+    children: PropTypes.object
+  }
   render() {
+    console.log("&&&&&", this.props);
     return (
       <div className="app-wrapper">
         <h1>Git coders</h1>
